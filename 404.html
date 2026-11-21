@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#ffffff">
+<title>Page not found | Felmixo</title>
+<style>
+:root{--pink:#f52d63;--ink:#090909;--muted:#686b75;--line:#ececf0}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#fff;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+header{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center}
+.wrap{width:min(1100px,calc(100% - 42px));margin:auto}
+.brand{font-size:27px;font-weight:800;letter-spacing:-1px;text-decoration:none;color:var(--ink)}
+main{min-height:calc(100vh - 144px);display:grid;place-items:center;padding:55px 20px}
+.content{max-width:590px;text-align:center}.error{font-size:clamp(90px,22vw,150px);line-height:.9;font-weight:800;letter-spacing:-9px;color:var(--pink);margin:0 0 22px}
+h1{font-size:clamp(27px,6vw,42px);letter-spacing:-1.5px;margin:0 0 15px}
+p{font-size:17px;line-height:1.7;color:var(--muted);margin:0 auto 28px;max-width:470px}
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.actions a{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:999px;text-decoration:none;font-weight:700;transition:transform .2s,box-shadow .2s}
+.actions a:hover{transform:translateY(-3px);box-shadow:0 10px 24px #f52d6328}.primary{background:var(--pink);color:#fff}.secondary{border:1px solid var(--line);color:var(--ink);background:#fff}
+.note{font-size:13px;margin-top:24px;color:#9295a0}footer{border-top:1px solid var(--line);padding:22px 0;color:#777b86;font-size:13px;text-align:center}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="https://app.felmixo.com/">Felmixo</a></div></header>
+<main><section class="content">
+<div class="error">404</div>
+<h1>Oops! This page isn't here.</h1>
+<p>The link may be broken, or the page may have been moved. Let's get you back to Felmixo.</p>
+<div class="actions">
+<a class="primary" href="https://app.felmixo.com/">Go to homepage&nbsp; →</a>
+<a class="secondary" href="https://play.google.com/store/apps/details?id=com.felmixo.plus" target="_blank" rel="noopener">Get the app</a>
+</div>
+<div class="note">Taking you to the homepage in <span id="seconds">5</span> seconds…</div>
+</section></main>
+<footer>© <span id="year"></span> Felmixo. All rights reserved.</footer>
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+let remaining=5;const seconds=document.getElementById("seconds");
+const timer=setInterval(()=>{remaining--;seconds.textContent=remaining;if(remaining<=0){clearInterval(timer);window.location.replace("https://app.felmixo.com/");}},1000);
+</script>
+</body></html>
