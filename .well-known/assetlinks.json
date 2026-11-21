@@ -1,0 +1,15 @@
+
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.felmixo.plus",
+      "sha256_cert_fingerprints": [
+        "C8:64:D6:58:76:CD:16:D4:25:06:BB:F7:03:96:E4:AE:81:3B:3B:50:47:31:56:7E:A3:B0:8E:5F:0C:F1:8F:2E"
+      ]
+    }
+  }
+]
